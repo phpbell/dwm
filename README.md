@@ -1,4 +1,4 @@
-# dwm 6.2
+# dwm v6.2
 ## Instalar
     git clone https://github.com/phpbell/dwm.git && cd dwm && sh make
 
