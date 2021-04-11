@@ -1,0 +1,6 @@
+#!/bin/bash
+#sudo nano /usr/share/xsessions/dwm.desktop
+alarm-clock-applet &
+pavucontrol &
+rhythmbox &
+exec dwm 
