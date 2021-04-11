@@ -5,19 +5,19 @@ $time=time();
 $dia_por_extenso=date('N',$time);
 switch($dia_por_extenso){
     case 1:
-    $dia_por_extenso='Segunda-feira';
+    $dia_por_extenso='Lunes/Segunda';
     break;
     case 2:
-    $dia_por_extenso='Terça-feira';
+    $dia_por_extenso='Martes/Terça';
     break;
     case 3:
-    $dia_por_extenso='Quarta-feira';
+    $dia_por_extenso='Miércoles/Quarta';
     break;
     case 4:
-    $dia_por_extenso='Quinta-feira';
+    $dia_por_extenso='Jueves/Quinta';
     break;
     case 5:
-    $dia_por_extenso='Sexta-feira';
+    $dia_por_extenso='Viernes/Sexta';
     break;
     case 6:
     $dia_por_extenso='Sábado';
