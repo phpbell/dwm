@@ -11,16 +11,7 @@
 # resolve o bug de apps java
 export _JAVA_AWT_WM_NONREPARENTING=1 
 
-# bateria, memória, calendário e relógio
-while true; do
-    bat="$(acpi -b)"
-    mem="$(free -h --si | awk '(NR==2){ print $3 }')"
-    status="$(echo "$bat, Mem: $mem ~" && date +"%A, %d.%b.%Y %H:%M")"
-    xsetroot -name " $(echo $status | xargs) "
-    sleep 1s    # atualiza a cada 1 segundo
-done &
-
-# bateria, memória, calendário e relógio (versão PHP com CPU)
+# bateria, cpu, memória, calendário e relógio
 while true; do
     bat="$(acpi -b)"
     mem="$(free -h --si | awk '(NR==2){ print $3 }')"
@@ -31,8 +22,9 @@ while true; do
     sleep 1s    # atualiza a cada 1 segundo
 done &
 
-# alarme
+# programas
 setsid alarm-clock-applet &
-
-# wallpaper
+setsid firefox &
+setsid pavucontrol &
+setsid rhythmbox &
 setsid nitrogen --restore &
